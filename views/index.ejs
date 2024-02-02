@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/47aea1224e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="icon"
+      type="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAKlBMVEVHcEwAAAAAAAAAAAAqUlM5hIU1m5xBsbIvursutLU6d3ggFhYhBwgnHB2DzKGsAAAAA3RSTlMAHsMsWmgLAAAAhklEQVR4AWNgVDZGAkYCDMLGKMCQAaIAoYTB2DUUCIKNjU1BdIgxg7FbxcyZ7UABMxCdAhQwtpo5fTNItXXlzMXGIAGbzqkQ/ZEzjMECxp2zIAIrp9NXYFooGGTCBWZ0gEEnQsvZu0BwG8OMARaw6exCBCFGIMOiIRkeDRgRhRGVGJGNkRwA6QWYbv2R+ccAAAAASUVORK5CYII"
+    />
+    <title>Hodlinfo</title>
+  </head>
+  <body>
+    <div id="body" class="container-fluid">
+      <div class="nav-container">
+        <div class="logo-container text-center mt-3">
+          <a href="#"
+            ><img
+              class="logo"
+              src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png"
+              alt=""
+          /></a>
+        </div>
+        <div class="button-container text-center mt-3">
+          <select class="navgation-btn">
+            <option>INR</option>
+          </select>
+          <select class="navgation-btn">
+            <option>BTC</option>
+            <option>ETH</option>
+            <option>USDT</option>
+            <option>XRP</option>
+            <option>TRX</option>
+            <option>DASH</option>
+            <option>ZTC</option>
+            <option>XEM</option>
+            <option>LOST</option>
+          </select>
+         <a href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn"> 
+          <button class="navgation-btn">BUY BTC</button>
+          </a>
+        </div>
+
+        <div class="telegram-container mt-4">
+          <p id="counter" class="counter">0</p>
+         <a style="text-decoration: none;" href="https://hodlinfo.com/connect/telegram"><button class="telegram-btn">
+            <img
+              class="telegram-img"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+            Connect Telegram
+          </button></a>
+          <div id="toggle_container" class="toggle-container mt-3">
+            <div id="toggle-btn" class="mini-toggle-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-container">
+        <div class="text1">
+          <p class="color1">0.28 %</p>
+          <p class="color2">5 Mins</p>
+        </div>
+        <div class="text1">
+          <p class="color1">0.63 %</p>
+          <p class="color2">1 Hour</p>
+        </div>
+
+        <div class="text2">
+          <p class="diff-color-1">Best Price To Trade</p>
+          <h1 id="amount-text" class="diff-color-2">₹ 23,77,314</h1>
+          <p class="diff-color-3">
+            Average BTC/INR net price including commision
+          </p>
+        </div>
+        <div class="text1">
+          <p class="color1">2.05 %</p>
+          <p class="color2">1 Day</p>
+        </div>
+        <div class="text1">
+          <p class="color1">6.61 %</p>
+          <p class="color2">7 Days</p>
+        </div>
+      </div>
+    
+       <table>
+        <thead>
+          <tr>
+            <th>
+              <h4>#</h4>
+            </th>
+            <th>
+              <h4>Platform</h4>
+            </th>
+            <th>
+              <h4>Last Traded Price</h4>
+            </th>
+            <th>
+              <h4>Buy / Sell Price</h4>
+            </th>
+            <th>
+              <h4> Difference</h4>
+            </th>
+            <th>
+              <h4>Savings</h4>
+            </th>
+          </tr>
+        </thead>
+      <tbody>
+        <% users.forEach((crypto,index) => { %>
+        <tr>
+          <td>
+            <h4 style="color: white;"><%= index + 1 %></h4>
+          </td>
+          <td>
+            <h4 style="color: white;"><%=crypto.name %></h4>
+          </td>
+          <td>
+            <h4 style="color: white;"><%=crypto.last %></h4>
+          </td>
+          <td>
+            <h4 style="color: white;"><%=crypto.buy %> / <%=crypto.sell%></h4>
+          </td>
+          <td>
+            <h4 style="color: white;"><%=crypto.volume %></h4>
+          </td>
+          <td>
+            <h4 style="color: white;"><%=crypto.last %></h4>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+       </table>
+   
+    </div>
+  </body>
+
+  <script>
+    const ul = document.getElementById("ul");
+     let toggle_btn = document.getElementById("toggle-btn");
+
+    let body = document.getElementById("body");
+
+    let toggle_container = document.getElementById("toggle_container");
+
+    let navgation_btn = document.getElementsByClassName("navgation-btn");
+
+    let amount_text = document.getElementById("amount-text");
+
+    let main = true;
+
+    let main_h1 = document.getElementsByTagName("h1");
+
+    let main_ul = document.getElementById("ul");
+
+    let counter = document.getElementById("counter");
+
+    toggle_btn.addEventListener("click", () => {
+      if (main) {
+        body.style.backgroundColor = "white";
+        body.style.color = "#0c0f48";
+        toggle_container.style.justifyContent = "flex-start";
+        toggle_container.style.backgroundColor = "white";
+        amount_text.style.color = "#0c0f48";
+        navgation_btn[0].style.backgroundColor = "white";
+        navgation_btn[0].style.color = "#191d28";
+        navgation_btn[1].style.backgroundColor = "white";
+        navgation_btn[1].style.color = "#191d28";
+        navgation_btn[2].style.backgroundColor = "white";
+        navgation_btn[2].style.color = "#191d28";
+        main_ul.classList.add("main-ul-class");
+
+        main = false;
+      } else {
+        body.style.backgroundColor = "#191d28";
+        toggle_container.style.justifyContent = "flex-end";
+        amount_text.style.color = "white";
+        toggle_container.style.backgroundColor = "#2e3241";
+        navgation_btn[0].style.backgroundColor = "#2e3241";
+        navgation_btn[0].style.color = "white";
+        navgation_btn[1].style.backgroundColor = "#2e3241";
+        navgation_btn[1].style.color = "white";
+        navgation_btn[2].style.backgroundColor = "#2e3241";
+        navgation_btn[2].style.color = "white";
+        main_ul.classList.remove("main-ul-class");
+        main = true;
+      }
+    });
+setInterval(() => {
+     let result = parseInt(counter.textContent) + 1; 
+    counter.textContent = result;
+    if (result == 60) {
+        counter.textContent = 0;
+    }
+}, 1000);
+  </script>
+</html>
