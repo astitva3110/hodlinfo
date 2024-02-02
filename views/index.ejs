@@ -104,7 +104,7 @@
 
         <div class="text2">
           <p class="diff-color-1">Best Price To Trade</p>
-          <h1 id="amount-text" class="diff-color-2">₹ 23,77,314</h1>
+          <h1 id="amount-text" class="diff-color-2"> <%= averageOfLast.toFixed(2) %></h1>
           <p class="diff-color-3">
             Average BTC/INR net price including commision
           </p>
@@ -135,10 +135,10 @@
               <h4>Buy / Sell Price</h4>
             </th>
             <th>
-              <h4> Difference</h4>
+              <h4> Volume</h4>
             </th>
             <th>
-              <h4>Savings</h4>
+              <h4>Base Unit</h4>
             </th>
           </tr>
         </thead>
@@ -161,7 +161,7 @@
             <h4 style="color: white;"><%=crypto.volume %></h4>
           </td>
           <td>
-            <h4 style="color: white;"><%=crypto.last %></h4>
+            <h4 style="color: white;"><%=crypto.base_unit %></h4>
           </td>
         </tr>
         <% }); %>

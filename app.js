@@ -42,7 +42,10 @@ const fetch = async () => {
         };
       });
       await User.insertMany(newUser);
-    console.log('Data updated in the database');
+    console.log('Data updated ');
+    const firstTenLastValues = newUser.slice(0, 10).map(crypto => crypto.last);
+    const averageOfLast = firstTenLastValues.reduce((sum, value) => sum + value, 0) / Math.min(10, newUser.length);
+
 
 }
 
@@ -61,7 +64,9 @@ catch (error) {
 
 app.get('/',async(req,res)=>{
     const users= await User.find();
-    res.render('index',{users})
+    const firstTenLastValues = users.slice(0, 10).map(crypto => crypto.last);
+    const averageOfLast = firstTenLastValues.reduce((sum, value) => sum + value, 0) / Math.min(10, users.length);
+    res.render('index',{users,averageOfLast})
 })
 
 
